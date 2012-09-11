@@ -16,8 +16,3 @@ class exports.Emitter
 		if queue[@guid]@@[event].length
 			queue[@guid][event] |> map ((args)-> tick -> fn ...args)
 		listeners[@guid]@@[event].push fn
-
-if window? or module is require.main
-	e = Emitter!
-	e.emit \test "hello"
-	e.on \test console~log
