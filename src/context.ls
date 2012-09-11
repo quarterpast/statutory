@@ -4,12 +4,7 @@
 exports.Context = (initial-state)->
 	var state
 
-	with new EventEmitter import {set-state: compose do
-		(new)
-		(import context:this)
-		(state:=)
-		(->@emit \state-change it)
-	}
+	with (new EventEmitter) with {set-state:->@emit \state-change state := new &0 <<< context:this}
 		@set-state initial-state
 
 		~function dispatch methods
