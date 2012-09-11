@@ -1,4 +1,3 @@
-#context.ls
 {EventEmitter} = require \events
 
 exports.Context = (initial-state)->
