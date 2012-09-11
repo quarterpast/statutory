@@ -12,10 +12,9 @@ exports.Context = (initial-state)->
 	}
 		@set-state initial-state
 
-		~function methodcall fn,args
-			if (state)~[fn]? then that ...args
-			else throw TypeError "State #{state.display-name} has no method '#fn'"
-
-		~function dispatch obj => zip-with methodcall,(keys obj),(values obj)
+		~function dispatch methods
+			for func,args of methods
+				if (state)~[func]? then that ...args
+				else throw TypeError "State #{state.display-name} has no method '#func'"
 
 		dispatch import all this
