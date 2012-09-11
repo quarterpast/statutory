@@ -1,4 +1,4 @@
-stately
+statutory
 =======
 ```coffeescript
 class state-one
@@ -11,7 +11,7 @@ class state-two
 		say it
 		if ++@count is 2 then @context.set-state state-one
 
-{Context} = require \stately
+{Context} = require \statutory
 
 ctx = Context state-one
 [1 to 10] |> each ->ctx action:['hello']
