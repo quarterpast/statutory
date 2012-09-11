@@ -1,4 +1,4 @@
-name: \stately
+name: \statutory
 version: \0.0.1
 
 description: 'State pattern in 10 lines of LiveScript like what'
