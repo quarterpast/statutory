@@ -1,7 +1,7 @@
 {
   "name": "Stately",
   "version": "0.0.1",
-  "description": "Implementing the State pattern in 10SLOC of LiveScript like what",
+  "description": "State pattern in 10 lines of LiveScript like what",
   "keywords": [
     "state",
     "machine",
