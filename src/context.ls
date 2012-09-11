@@ -1,20 +1,16 @@
 #context.ls
 {EventEmitter} = require \events
 
-throw-unless(fn,msg,val)= unless fn val then throw TypeError msg else val
-
-exports.Context = (...states)->
+exports.Context = (initial-state)->
 	var state
 
 	with new EventEmitter import {set-state: compose do
-		throw-unless (in states),"Not a valid state"
 		(new)
 		(import context:this)
 		(state:=)
 		(->@emit \state-change it)
 	}
-
-		@set-state states.0
+		@set-state initial-state
 
 		~function methodcall fn,args
 			if (state)~[fn]? then that ...args
