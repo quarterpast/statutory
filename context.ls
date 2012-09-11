@@ -3,7 +3,7 @@
 
 throw-unless(fn,msg,val)= unless fn val then throw TypeError msg else val
 
-Context = (...states)->
+exports.Context = (...states)->
 	var state
 
 	with Emitter! import {set-state: compose do
