@@ -1,5 +1,5 @@
 name: \statutory
-version: \0.0.1
+version: \0.0.1a
 
 description: 'State pattern in 10 lines of LiveScript like what'
 keywords:
